@@ -1,0 +1,25 @@
+
+Options -Indexes
+RewriteEngine On
+RewriteRule ^register$ /register.php [L]
+RewriteRule ^login$ /login.php [L]
+RewriteRule ^edit$ edit.php [L]
+RewriteRule ^dashboard$ dashboard.php [L]
+RewriteRule ^u/(.*)$ mypage.php?username=$1 [L]
+RewriteRule ^home$ index.php [L]
+RewriteRule ^api/login$ inc/API/login.api.php [L]
+RewriteRule ^api/register$ inc/API/register.api.php [L]
+RewriteRule ^api/edit$ inc/API/edit.api.php [L]
+RewriteRule ^error/usernotfound$ /errors/usernotfound.php [L]
+RewriteRule ^inc/logs$ inc/logs [F]
+RewriteRule ^inc/$ inc/index.php [F]
+ErrorDocument 400 /errors/400.php
+ErrorDocument 401 /errors/401.php
+ErrorDocument 402 /errors/402.php
+ErrorDocument 403 /errors/403.php
+ErrorDocument 404 /errors/404.php
+ErrorDocument 500 /errors/500.php
+ErrorDocument 501 /errors/501.php
+ErrorDocument 502 /errors/502.php
+
+DirectoryIndex index.php

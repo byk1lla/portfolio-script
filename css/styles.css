@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+* {
+    font-family: 'Poppins', sans-serif;
+    list-style-type: none;
+}
+body {
+    line-height: 1.6;
+background: url('../img/wpp.png') no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+color: #fff; 
+    display: flex;
+    padding: 20px;
+    justify-content: center;    
+}
+
+
+
+.container {
+    max-width: 600px;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    background-color: rgba(34, 34, 34,0.4); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.profile-picture {
+    text-align: center;
+    padding: 20px;
+
+}
+
+.profile-picture img {
+    max-width: 200px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px  rgb(255, 255, 255),
+    0px 0px 18px rgb(255, 255, 255),
+    0px 0px 5px rgb(255, 255, 255),
+    0px 0px 5px white
+   ;
+    
+}
+
+.username {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 28px; 
+
+}
+
+.about-me {
+    text-align: center  ;
+}
+.about-me h2 {
+    
+    font-size: 24px; 
+    margin-bottom: 10px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+}
+
+.about-me p {
+    line-height: 1.8; 
+}
+.social-media{
+    text-align: center  ;
+}
+
+.social-media h2 {
+    font-size: 24px; 
+    margin-bottom: 10px;
+    border-bottom: 1px solid #444; 
+    padding-bottom: 5px;
+}
+.social-media ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+.social-media li {
+    margin-bottom: 10px; /* Liste içi boşlukları kaldır */
+    list-style-type: none;
+}
+.social-media li > a{
+    color: white;
+}
+
+.social-media-box {
+    list-style-type: none;
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+
+
+
+
+
+.signature{
+    text-align: center;
+
+}
+.signature h2 {
+    font-size: 24px; 
+    margin-bottom: 10px;
+    border-bottom: 1px solid #444; /* İmza başlık altına çizgi ekle */
+    padding-bottom: 5px;
+}
+
+.signature p {
+    font-style: italic;
+    line-height: 1.8; /* İmza metinlerinin satır aralığını artır */
+}
+.duzenle{
+    text-align: right;
+    color: #ccc;    
+}
+.duzenle > a {
+    color: #ccc;    
+
+}
+a {
+    text-decoration: none;
+}
+
+.fa-brands{
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: background-color 0.4s ease;
+}
+.fa-solid{
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: background-color 0.4s ease;
+}
+
+  .fa-steam:hover {      
+      background-color: #1b2838;
+    }
+    .fa-tiktok:hover{
+      
+      background-color: #0d0d0d;
+      color: #ccc;
+    }
+    .fa-github:hover {
+      
+      background-color: #181717;
+    }
+    
+    .fa-twitter:hover {
+      
+      background-color: #1da1f2;
+    }
+    .fa-instagram:hover {
+      
+      background-color: #ff527a;
+    }
+    .fa-envelope:hover{
+        background-color: #80501b;
+        color: white;
+
+    }  
+  

@@ -1,0 +1,11 @@
+.ok-button {
+    background-color: #007bff !important;
+    color: #fff !important; 
+    
+  }
+
+  .error-button {
+    background-color: #dc3545 !important; 
+    color: #fff !important; 
+    
+  }

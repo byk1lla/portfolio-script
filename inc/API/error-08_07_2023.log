@@ -1,0 +1,15 @@
+[2023/08/07 15:00:13] [ERROR][/api/edit] An Error Occured!
+    Type->PDOException
+    Message->SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'pic_path, link1, link2, link3, link4, link5, link6, visit_count, last_visit) ...' at line 1
+[2023/08/07 15:00:16] [ERROR][/api/edit] An Error Occured!
+    Type->PDOException
+    Message->SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'pic_path, link1, link2, link3, link4, link5, link6, visit_count, last_visit) ...' at line 1
+[2023/08/07 15:00:28] [ERROR][/api/edit] An Error Occured!
+    Type->PDOException
+    Message->SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'pic_path, link1, link2, link3, link4, link5, link6, visit_count, last_visit) ...' at line 1
+[2023/08/07 15:00:29] [ERROR][/api/edit] An Error Occured!
+    Type->PDOException
+    Message->SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'pic_path, link1, link2, link3, link4, link5, link6, visit_count, last_visit) ...' at line 1
+[2023/08/07 15:02:34] [ERROR][/api/edit] An Error Occured!
+    Type->PDOException
+    Message->SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'pic_path, link1, link2, link3, link4, link5, link6, visit_count, last_visit) ...' at line 1
