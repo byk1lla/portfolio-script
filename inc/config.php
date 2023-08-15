@@ -158,7 +158,11 @@ class User extends SQL {
       }
     }
     }
-    
+  public function generateimgname($userid,$username){
+    $date = date("Ymd_His");  
+    $filename = $username. "-" . $userid . "_" . $date;
+    return $filename;    
+  }
   public function isloggedin(){
     if(isset($_SESSION['userid'])){
       return true;

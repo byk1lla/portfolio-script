@@ -74,7 +74,7 @@ if (isset($_POST['update'])) {
     </div>    
     <div class="input">
         <label for="username">Username <yildiz>*</yildiz></label>
-        <input type="text" id="username" name="username" placeholder="<?=$arr['username']?>" required>
+        <input type="text" id="username" name="username" placeholder="<?=$arr['username']?>">
 
         <label for="about_me">About Me <yildiz>*</yildiz></label>
         <textarea placeholder="<?=$arr['aboutme']?>" id="about_me" name="about_me" required></textarea>
@@ -85,7 +85,7 @@ if (isset($_POST['update'])) {
 <div class="social-media-container">
     <h2>Social Media</h2>
     <div>
-        <label for="link"><i class="fa-brands fa-tiktok"></i> Tiktok</label>
+        <label for="link"><i class="fa-brands fa-spotify"></i> Tiktok</label>
         <input type="text" placeholder="<?= "https://tiktok.com/@" . $arr['link1'] ?? "https://tiktok.com/@"?>" id="link" name="link1">
     </div>
     
