@@ -1,0 +1,9 @@
+[2023/08/08 01:31:46] [ERROR][/u/byk1lla] An Error Occured!
+    Type->PDOException
+    Message->SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+[2023/08/08 01:31:46] [ERROR][/u/byk1lla] An Error Occured!
+    Type->PDOException
+    Message->SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+[2023/08/08 01:44:17] [ERROR][/dashboard] An Error Occured!
+    Type->PDOException
+    Message->SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null

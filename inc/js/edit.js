@@ -22,13 +22,12 @@ document.addEventListener("DOMContentLoaded", function () {
       xhr.open("POST", "api/edit");
       xhr.onload = function () {
         if (xhr.status === 200) {
-            console.log(xhr.responseText);
             const response = JSON.parse(xhr.responseText);
           if (response.status === "success") {
             success("Success!","Portfolio updated successfully!");
           } else {
 
-            error("Error","Failed to update portfolio. Please try again later.");
+            error("Error",response.message);
           }
         } else {
           error("Error",xhr.statusText);

@@ -19,11 +19,9 @@ if(!$user->isloggedin()){
     $log->activity($main->url,"Unauthorized User detected!\nRedirected to login.\nIP-> [" . $_SERVER['REMOTE_ADDR'] ."]");
     header("Location: ./login");
 }
-if(!$checkmypage){
-    $portfolio->addPost($_SESSION['userid'],$_SESSION['username'],"",null,"../img/default.png",null,null,null,null,null,null,0,date("Y-m-d H:i:s"));    
-}
 
-    // $visit = $user->getvisit($_SESSION['userid']);
+
+    $visit = $user->getvisit($_SESSION['userid']);
 
 
 
@@ -73,5 +71,11 @@ if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
     </div>
     <script src="../inc/js/dash.js"></script>
     <script src="../inc/js/config.js"></script>
+    <?php 
+    if(!$checkmypage){
+        echo "<script>wait('Please Wait','Your First Portfolio Page Has Been Creating...')</script>";
+        $portfolio->addPost($_SESSION['userid'],$_SESSION['username'],"",null,"../img/default.png",null,null,null,null,null,null,0,date("Y-m-d H:i:s"));    
+    } 
+    ?>
 </body>
 </html>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1
--- Üretim Zamanı: 01 Ağu 2023, 02:03:15
+-- Üretim Zamanı: 08 Ağu 2023, 03:13:12
 -- Sunucu sürümü: 10.4.28-MariaDB
 -- PHP Sürümü: 8.2.4
 
@@ -46,7 +46,8 @@ CREATE TABLE `portfolio` (
   `id` int(11) NOT NULL,
   `user_id` varchar(25) NOT NULL,
   `title` varchar(100) NOT NULL,
-  `description` text NOT NULL,
+  `description` text DEFAULT NULL,
+  `sign` text DEFAULT NULL,
   `pic_path` text NOT NULL,
   `link1` text DEFAULT NULL,
   `link2` text DEFAULT NULL,
@@ -74,13 +75,6 @@ CREATE TABLE `users` (
   `reg_time` datetime NOT NULL,
   `last_login` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Tablo döküm verisi `users`
---
-
-INSERT INTO `users` (`id`, `username`, `eposta`, `IP`, `unique_id`, `password`, `reg_time`, `last_login`) VALUES
-(8, 'byk1lla', 'cozanqel0811@gmail.com', '::1', '31072023045956-4ctFr', '$2y$10$538lU8d6TGz3mBQFdWDfZeJP9xZ4BLo3BZduDGKQGDPCzHsuJyxJS', '2023-07-31 05:59:56', '2023-07-31 05:59:56');
 
 -- --------------------------------------------------------
 
@@ -111,8 +105,7 @@ ALTER TABLE `login_log`
 --
 ALTER TABLE `portfolio`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `uniques` (`link1`,`link2`,`link3`,`link4`,`link5`,`link6`) USING HASH,
-  ADD KEY `fk_user` (`user_id`);
+  ADD UNIQUE KEY `unique` (`user_id`);
 
 --
 -- Tablo için indeksler `users`
@@ -125,6 +118,7 @@ ALTER TABLE `users`
 -- Tablo için indeksler `uservisitors`
 --
 ALTER TABLE `uservisitors`
+  ADD PRIMARY KEY (`id`),
   ADD KEY `fk_user_id` (`userid`,`last_visit`,`visitcount`) USING BTREE;
 
 --
@@ -147,7 +141,13 @@ ALTER TABLE `portfolio`
 -- Tablo için AUTO_INCREMENT değeri `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Tablo için AUTO_INCREMENT değeri `uservisitors`
+--
+ALTER TABLE `uservisitors`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Dökümü yapılmış tablolar için kısıtlamalar

@@ -20,6 +20,7 @@ color: #fff;
 
 .container {
     max-width: 600px;
+    min-width: 500px;
     display: flex;
     align-self: center;
     flex-direction: column;
@@ -37,6 +38,7 @@ color: #fff;
 
 .profile-picture img {
     max-width: 200px;
+    max-height: 150px;
     border-radius: 50%;
     box-shadow: 0px 0px 15px  rgb(255, 255, 255),
     0px 0px 18px rgb(255, 255, 255),
@@ -54,10 +56,10 @@ color: #fff;
 }
 
 .about-me {
+    /* padding: 20px; */
     text-align: center  ;
 }
 .about-me h2 {
-    
     font-size: 24px; 
     margin-bottom: 10px;
     border-bottom: 1px solid #444;
@@ -149,10 +151,10 @@ a {
   .fa-steam:hover {      
       background-color: #1b2838;
     }
-    .fa-tiktok:hover{
+    .fa-spotify:hover{
       
-      background-color: #0d0d0d;
-      color: #ccc;
+      background-color: #191414;
+      color: #1DB954;
     }
     .fa-github:hover {
       

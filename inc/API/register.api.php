@@ -48,6 +48,3 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 } else {
     echo json_encode(array("status" => "error", "message" => "Unsupported request method. OR SomeOne Access With URL"));
 }
-
-
-?>

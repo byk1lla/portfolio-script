@@ -27,15 +27,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($result) {
       if (password_verify($password, $result['password'])) {
-        
+
         $_SESSION['username'] = $result['username'];
         $_SESSION['userid'] = $result['unique_id'];
-        $user->login($_SESSION['userid'],$_POST['device'],$_POST['browser']);
-        $log->info($sql->url,"User Logged in -> " . $_SESSION['username'] . "-" . $_SESSION['userid']);
+        $user->login($_SESSION['userid'], $_POST['device'], $_POST['browser']);
+        $log->info($sql->url, "User Logged in -> " . $_SESSION['username'] . "-" . $_SESSION['userid']);
         echo json_encode(array('success' => true, 'user' => $result));
       } else {
         echo json_encode(array('success' => false, 'message' => 'Invalid password'));
-        $log->activity($_SERVER["REQUEST_URI"],"LoginExcepiton
+        $log->activity($_SERVER["REQUEST_URI"], "LoginExcepiton
         ->$username
         ->$password
         Invalid Password!");
@@ -50,5 +50,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     exit;
   }
 }
-
-?>

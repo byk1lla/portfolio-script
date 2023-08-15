@@ -59,7 +59,7 @@ if (isset($_POST['update'])) {
 </a>
 <h2 class="head">Edit MyPage&trade; - <?= $arr['username']?></h2>
 <a href="../u/<?=$username?>">
-    <span> MyPage&trade;</span>
+    <span> MyPage&trade;</span> 
     <i class='fa-solid fa-arrow-right'></i>
 </a>
 </div>
@@ -68,54 +68,50 @@ if (isset($_POST['update'])) {
 <form method="post" enctype="multipart/form-data">
 <div class="pp">
         <h2>Profile Picture</h2>
-        <img src="../img/<?= $arr['img']?>" id="image" alt="Profil Resmi">
-            <br>
-        <input type="file" name="profile_photo" id="uploadimg" accept="image/png, image/gif, image/jpeg" >
+        <img src="../inc/API<?= $arr['img']?>" id="image" alt="Profil Resmi">
+        <br>
+        <input type="file" name="img" id="uploadimg" value="<?= $arr['img'] ?>" accept="image/png, image/gif, image/jpeg,image/webp" >
     </div>    
     <div class="input">
-        <label for="username">Username <yildiz>*</yildiz></label>
-        <input type="text" id="username" name="username" placeholder="<?=$arr['username']?>">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" value="<?=$arr['username']?>">
 
-        <label for="about_me">About Me <yildiz>*</yildiz></label>
-        <textarea placeholder="<?=$arr['aboutme']?>" id="about_me" name="about_me" required></textarea>
+        <label for="about_me">About Me</label>
+        <textarea id="about_me" name="about_me"><?=$arr['aboutme']?></textarea>
         
         <label for="signature">Signature <span>(optional)</span></label>
-        <textarea placeholder="<?=$arr['sign'] ?? "Type Something..."?>" id="signature" name="signature"></textarea>
+        <textarea placeholder="Type Something..." id="signature" name="signature"><?=$arr['sign']?></textarea>
     </div>
 <div class="social-media-container">
     <h2>Social Media</h2>
     <div>
-        <label for="link"><i class="fa-brands fa-spotify"></i> Tiktok</label>
-        <input type="text" placeholder="<?= "https://tiktok.com/@" . $arr['link1'] ?? "https://tiktok.com/@"?>" id="link" name="link1">
+        <label for="link"><i class="fa-brands fa-spotify"></i> Spotify</label>
+        <input type="text" value="<?= $arr['link1']?>" id="link" name="link1">
     </div>
     
     <div>
         <label for="link"><i class="fa-brands fa-instagram"></i> Instagram</label>
-        <input type="text" placeholder="<?= "https://instagram.com/" . $arr['link2'] ?? "https://instagram.com/@"?>" id="link" name="link2">
+        <input type="text" value="<?= $arr['link2']?>" id="link" name="link2">
     </div>
     
     <div>
         <label for="link"><i class="fa-brands fa-github"></i> Github</label>
-        <input type="text" placeholder="<?= "https://github.com/" . $arr['link3'] ?? "https://github.com/@"?>"  id="link" name="link3">
+        <input type="text" value="<?= $arr['link3']?>"  id="link" name="link3">
     </div>
-    
+        
     <div>
         <label for="link"><i class="fa-solid fa-envelope"></i> Mail</label>
-        <input type="text" placeholder="<?= "mailto:" . $arr['link4'] ?? "mailto:"?>"  id="link" name="link4">
+        <input type="text" value="<?= $arr['link4'] ?? "mailto:"?>"  id="link" name="link4">
     </div>
     
     <div>
         <label for="link"><i class="fa-brands fa-steam"></i> Steam</label>
-        <input type="text" placeholder="<?= "https://steamcommunity.com/id/" . $arr['link5'] ?? "https://steamcommunity.com/id/"?>"  id="link" name="link5">
+        <input type="text" value="<?=  $arr['link5']?>"  id="link" name="link5">
     </div>
     
     <div>
         <label for="link"><i class="fa-brands fa-twitter"></i> Twitter</label>
-        <input type="text" placeholder="<?= "https://twitter.com/". $arr['link6'] ?? "https://twitter.com/"?>"  id="link" name="link6">    
-    </div>
-
-    <div class="social-media-box">
-
+        <input type="text" value="<?= $arr['link6']?>"  id="link" name="link6">    
     </div>
     
 </div>

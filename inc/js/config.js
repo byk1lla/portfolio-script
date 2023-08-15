@@ -25,26 +25,28 @@ function success(title, message) {
   }
 function wait(title,message){
   let timerInterval
-Swal.fire({
-  title: title,
-  html: message + "<b></b> Left!",
-  timer: 500000,
-  timerProgressBar: true,
-  didOpen: () => {
-    Swal.showLoading()
-    const b = Swal.getHtmlContainer().querySelector('b')
-    timerInterval = setInterval(() => {
-      b.textContent = Swal.getTimerLeft() * 3600;
-    }, 1000)
-  },
-  willClose: () => {
-    clearInterval(timerInterval)
-  }
-}).then((result) => {
-
-  if (result.dismiss === Swal.DismissReason.timer) {
-    success("Success!","Your First Portfolio Page Created Successfuly!");
-    
-  }
-})
+  Swal.fire({
+    title: title,
+    html: message + "<br><b></b> Left!",
+    timer: 10000,
+    timerProgressBar: true,
+    didOpen: () => {
+      Swal.showLoading()
+      const b = Swal.getHtmlContainer().querySelector('b')
+      timerInterval = setInterval(() => {
+        const timeLeft = Swal.getTimerLeft() / 1000; 
+        const minutes = Math.floor((timeLeft % 3600) / 60); 
+        const seconds = Math.floor(timeLeft % 60);   
+        b.textContent = `${minutes}m ${seconds}s`; 
+      }, 1000)
+    },
+    willClose: () => {
+      clearInterval(timerInterval)
+    }
+  }).then((result) => {
+    if (result.dismiss === Swal.DismissReason.timer) {
+      success("Success!", "Your First Portfolio Page Created Has Been Successfully!");
+    }
+  })
+  
 }
